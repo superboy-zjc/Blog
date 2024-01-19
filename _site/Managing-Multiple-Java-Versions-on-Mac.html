@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Managing Multiple Java Versions on Mac</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.ico">
+
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Managing Multiple Java Versions on Mac | Zhong’s Blog</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Managing Multiple Java Versions on Mac" />
+<meta name="author" content="2h0ng" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using /usr/libexec/java_home -V, you can view all Java versions installed on your Mac system:" />
+<meta property="og:description" content="Using /usr/libexec/java_home -V, you can view all Java versions installed on your Mac system:" />
+<link rel="canonical" href="http://localhost:8000/Managing-Multiple-Java-Versions-on-Mac" />
+<meta property="og:url" content="http://localhost:8000/Managing-Multiple-Java-Versions-on-Mac" />
+<meta property="og:site_name" content="Zhong’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-16T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Managing Multiple Java Versions on Mac" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"2h0ng","url":"https://blog.2h0ng.wiki"},"dateModified":"2023-05-16T00:00:00-04:00","datePublished":"2023-05-16T00:00:00-04:00","description":"Using /usr/libexec/java_home -V, you can view all Java versions installed on your Mac system:","headline":"Managing Multiple Java Versions on Mac","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8000/Managing-Multiple-Java-Versions-on-Mac"},"url":"http://localhost:8000/Managing-Multiple-Java-Versions-on-Mac"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>2h0ng@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Managing Multiple Java Versions on Mac</h2>
+  <time datetime="2023-05-16T00:00:00-04:00" class="by-line">16 May 2023</time>
+  <p>Using <code class="language-plaintext highlighter-rouge">/usr/libexec/java_home -V</code>, you can view all Java versions installed on your Mac system:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">➜</span>  <span class="nx">bin</span> <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">libexec</span><span class="o">/</span><span class="nx">java_home</span> <span class="o">-</span><span class="nx">V</span>
+<span class="nx">Matching</span> <span class="nx">Java</span> <span class="nx">Virtual</span> <span class="nc">Machines </span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="mf">20.0</span><span class="p">.</span><span class="mi">1</span> <span class="p">(</span><span class="nx">arm64</span><span class="p">)</span> <span class="dl">"</span><span class="s2">Homebrew</span><span class="dl">"</span> <span class="o">-</span> <span class="dl">"</span><span class="s2">OpenJDK 20.0.1</span><span class="dl">"</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Cellar</span><span class="o">/</span><span class="nx">openjdk</span><span class="o">/</span><span class="mf">20.0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="nx">libexec</span><span class="o">/</span><span class="nx">openjdk</span><span class="p">.</span><span class="nx">jdk</span><span class="o">/</span><span class="nx">Contents</span><span class="o">/</span><span class="nx">Home</span>
+    <span class="mf">11.0</span><span class="p">.</span><span class="mi">19</span> <span class="p">(</span><span class="nx">arm64</span><span class="p">)</span> <span class="dl">"</span><span class="s2">Homebrew</span><span class="dl">"</span> <span class="o">-</span> <span class="dl">"</span><span class="s2">OpenJDK 11.0.19</span><span class="dl">"</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Cellar</span><span class="o">/</span><span class="nx">openjdk</span><span class="p">@</span><span class="nd">11</span><span class="sr">/11.0.19/</span><span class="nx">libexec</span><span class="o">/</span><span class="nx">openjdk</span><span class="p">.</span><span class="nx">jdk</span><span class="o">/</span><span class="nx">Contents</span><span class="o">/</span><span class="nx">Home</span>
+    <span class="mf">1.8</span><span class="p">.</span><span class="mf">371.11</span> <span class="p">(</span><span class="nx">x86_64</span><span class="p">)</span> <span class="dl">"</span><span class="s2">Oracle Corporation</span><span class="dl">"</span> <span class="o">-</span> <span class="dl">"</span><span class="s2">Java</span><span class="dl">"</span> <span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">Internet</span> <span class="nx">Plug</span><span class="o">-</span><span class="nx">Ins</span><span class="o">/</span><span class="nx">JavaAppletPlugin</span><span class="p">.</span><span class="nx">plugin</span><span class="o">/</span><span class="nx">Contents</span><span class="o">/</span><span class="nx">Home</span>
+<span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">homebrew</span><span class="o">/</span><span class="nx">Cellar</span><span class="o">/</span><span class="nx">openjdk</span><span class="o">/</span><span class="mf">20.0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="nx">libexec</span><span class="o">/</span><span class="nx">openjdk</span><span class="p">.</span><span class="nx">jdk</span><span class="o">/</span><span class="nx">Contents</span><span class="o">/</span><span class="nx">Home</span>
+</code></pre></div></div>
+
+<p>The command <code class="language-plaintext highlighter-rouge">/usr/libexec/java_home -v version_number</code> can be used to find the installation location of a specific Java version, allowing us to quickly switch between different Java versions:</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="nx">JAVA_HOME</span><span class="o">=</span><span class="s2">`/usr/libexec/java_home -v 1.8`</span>
+</code></pre></div></div>
+
+<p>To facilitate quick switching between different Java versions, add the following function in <code class="language-plaintext highlighter-rouge">~/.zprofile</code>. To switch Java versions, just type <code class="language-plaintext highlighter-rouge">jdk version_number</code>.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">jdk </span><span class="p">()</span> <span class="p">{</span>
+    <span class="err">#</span> <span class="nx">Check</span> <span class="k">for</span> <span class="nx">no</span> <span class="nx">arguments</span> <span class="nx">or</span> <span class="nx">help</span> <span class="nx">argument</span>
+    <span class="k">if</span> <span class="p">[</span> <span class="dl">"</span><span class="s2">$#</span><span class="dl">"</span> <span class="o">-</span><span class="nx">eq</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="dl">"</span><span class="s2">$1</span><span class="dl">"</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">-h</span><span class="dl">"</span> <span class="p">]</span> <span class="o">||</span> <span class="p">[</span> <span class="dl">"</span><span class="s2">$1</span><span class="dl">"</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">--help</span><span class="dl">"</span> <span class="p">];</span> <span class="nx">then</span>
+        <span class="nx">echo</span> <span class="dl">"</span><span class="s2">Usage: jdk [version|-l]</span><span class="dl">"</span>
+        <span class="nx">echo</span> <span class="dl">"</span><span class="s2">  version: Set JAVA_HOME to the JDK version specified.</span><span class="dl">"</span>
+        <span class="nx">echo</span> <span class="dl">"</span><span class="s2">  -l     : List installed JDKs.</span><span class="dl">"</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="nx">fi</span>
+
+    <span class="err">#</span> <span class="nx">Check</span> <span class="k">if</span> <span class="nx">first</span> <span class="nx">argument</span> <span class="nx">is</span> <span class="o">-</span><span class="nx">l</span><span class="p">,</span> <span class="nx">list</span> <span class="nx">JDK</span> <span class="nx">versions</span>
+    <span class="k">if</span> <span class="p">[</span> <span class="dl">"</span><span class="s2">$1</span><span class="dl">"</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">-l</span><span class="dl">"</span> <span class="p">];</span> <span class="nx">then</span>
+        <span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">libexec</span><span class="o">/</span><span class="nx">java_home</span> <span class="o">-</span><span class="nx">V</span>
+    <span class="k">else</span>
+        <span class="err">#</span> <span class="nb">Set</span> <span class="nx">JAVA_HOME</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">specified</span> <span class="nx">version</span>
+        <span class="k">export</span> <span class="nx">JAVA_HOME</span><span class="o">=</span><span class="s2">`/usr/libexec/java_home -v $1`</span>
+        <span class="err">#</span> <span class="nx">Execute</span> <span class="nx">java</span> <span class="o">-</span><span class="nx">version</span> <span class="nx">to</span> <span class="nx">check</span> <span class="nx">the</span> <span class="nx">active</span> <span class="nx">version</span>
+        <span class="nx">echo</span> <span class="dl">"</span><span class="s2">Switching to Java version: $1</span><span class="dl">"</span>
+        <span class="nx">java</span> <span class="o">-</span><span class="nx">version</span>
+        <span class="k">if</span> <span class="p">[</span> <span class="nx">$</span><span class="p">?</span> <span class="o">-</span><span class="nx">eq</span> <span class="mi">0</span> <span class="p">];</span> <span class="nx">then</span>
+            <span class="nx">echo</span> <span class="dl">"</span><span class="s2">Java version switched successfully.</span><span class="dl">"</span>
+        <span class="k">else</span>
+            <span class="nx">echo</span> <span class="dl">"</span><span class="s2">Failed to switch Java version.</span><span class="dl">"</span>
+        <span class="nx">fi</span>
+    <span class="nx">fi</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="https://api.2h0ng.wiki:443/noteimages/2024/01/19/17-28-58-c26a0f8f64b36f8aaa6a3a6f29b833c6.png" alt="Untitled" /></p>
+
+<h1 id="memo">Memo</h1>
+
+<p>Java installations downloaded from the Oracle website are located at <code class="language-plaintext highlighter-rouge">/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home</code>.</p>
+
+<p>Java installations via Brew are located at <code class="language-plaintext highlighter-rouge">/opt/homebrew/Cellar/openjdk/</code>, or <code class="language-plaintext highlighter-rouge">/Library/Java/JavaVirtualMachines/openjdk</code>.</p>
+
+<h1 id="references">References</h1>
+
+<p><a href="https://juejin.cn/post/6871959224314757134">https://juejin.cn/post/6871959224314757134</a></p>
+
+<p><a href="https://linuxize.com/post/bash-functions/">https://linuxize.com/post/bash-functions/</a></p>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>2h0ng</b>
+    </span>
+    
+    <span>© 2024</span>
+  </a>
+</footer>
+
+  
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRNNF9TMHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-JRNNF9TMHE');
+</script>
+  
+</body>
+
+</html>
